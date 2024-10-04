@@ -1,29 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<script>
-(function(){
-window.alert = function(name){
-var iframe = document.createElement("IFRAME");
-iframe.style.display="none";
-iframe.setAttribute("src", 'data:text/plain');
-document.documentElement.appendChild(iframe);
-window.frames[0].window.alert(name);
-iframe.parentNode.removeChild(iframe);
-}
-})();
-alert('预约奶粉成功');
-</script>
+<title>alert.html</title>
+<meta charset="UTF-8">
+<meta name="keywords" content="keyword1,keyword2,keyword3">
+<meta name="description" content="this is my page">
+<meta name="content-type" content="text/html; charset=UTF-8">
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+ 
 </head>
 <body>
+    你已预约成功
+    <br>
+    <script type="text/javascript" src="alert.js"></script>
+    <script type="text/javascript">
+        alert("你的奶粉预约成功");
+    </script>
 <div id="datetime">
 <script>
 setInterval("document.getElementById('datetime').innerHTML=new Date().toLocaleString();", 1000);
 </script>
 </div>
-
-<input type="button" onclick="myFunction()" value="预约奶粉" />
-
 </body>
 </html>
